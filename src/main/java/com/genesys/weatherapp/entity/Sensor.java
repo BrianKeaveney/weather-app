@@ -29,5 +29,5 @@ public class Sensor {
     private String sensorId;
 
     @OneToMany(mappedBy = "sensor")
-    private Set<Weather> weatherList;
+    private Set<Weather> metrics;
 }

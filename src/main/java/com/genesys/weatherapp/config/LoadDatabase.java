@@ -17,8 +17,8 @@ public class LoadDatabase {
     CommandLineRunner initDatabase(final SensorRepository repository) {
 
         return args -> {
-            log.info("Preloading " + repository.save(Sensor.builder().sensorId("asdfasdf").cityName("Galway").countryName("Dublin").build()));
-            repository.findAll().forEach(sensor -> log.info(sensor.getSensorId()));
+            log.info("Preloading " + repository.save(Sensor.builder().sensorId("asdfasdf").cityName("Galway").countryName("Ireland").build()));
+            repository.findAll().forEach(sensor -> log.info(sensor.getId()));
         };
 
     }

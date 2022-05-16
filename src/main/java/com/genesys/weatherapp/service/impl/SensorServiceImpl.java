@@ -24,10 +24,16 @@ public class SensorServiceImpl implements SensorService {
         return entity;
     }
 
+    @Override
+    public Sensor getSensor(final String sensorId) {
+
+        return sensorRepository.findBySensorId(sensorId);
+    }
+
     private Sensor mapToSensor(final SensorRequest sensorRequest) {
         return Sensor.builder()
                 .countryName(sensorRequest.getCountryName())
-                .id(sensorRequest.getSensorId())
+                .sensorId(sensorRequest.getSensorId())
                 .cityName(sensorRequest.getCityName())
                 .build();
     }

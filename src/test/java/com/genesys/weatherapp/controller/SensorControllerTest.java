@@ -18,10 +18,8 @@ public class SensorControllerTest {
 
     @Mock
     SensorService sensorService;
-
     @InjectMocks
     SensorController sensorController;
-
 
     @Test
     public void testRegisterSensorReturnsValidResponse() {

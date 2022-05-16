@@ -5,4 +5,6 @@ import com.genesys.weatherapp.entity.Sensor;
 
 public interface SensorService {
     Sensor registerSensor(SensorRequest sensorRequest);
+
+    Sensor getSensor(String sensorId);
 }

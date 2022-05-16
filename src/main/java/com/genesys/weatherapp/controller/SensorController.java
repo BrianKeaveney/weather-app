@@ -5,9 +5,7 @@ import com.genesys.weatherapp.dto.SensorResponse;
 import com.genesys.weatherapp.entity.Sensor;
 import com.genesys.weatherapp.service.SensorService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class SensorController {
@@ -24,4 +22,12 @@ public class SensorController {
 
         return ResponseEntity.ok(SensorResponse.builder().sensor(sensor).message("Success").build());
     }
+
+    @GetMapping("/sensor")
+    public ResponseEntity<SensorResponse> getSensor(@RequestParam final String id) {
+        final Sensor sensor = sensorService.getSensor(id);
+
+        return ResponseEntity.ok(SensorResponse.builder().sensor(sensor).message("Success").build());
+    }
+
 }
