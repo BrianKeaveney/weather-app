@@ -2,11 +2,11 @@ spring:
   data:
     rest:
       basePath: "/"
-#  jpa:
-#    hibernate:
-#      ddl-auto: create
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/weather-app
-#    username: postgres
-#    password: example
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weather-app
+    username: postgres
+    password: secret

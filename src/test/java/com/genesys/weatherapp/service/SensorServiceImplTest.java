@@ -26,7 +26,7 @@ public class SensorServiceImplTest {
     SensorServiceImpl sensorService;
 
     @Test
-    public void test_registerSensor_returns_new_sensor() {
+    public void testRegisterSensorReturnsNewSensor() {
         final SensorRequest sensorRequest = SampleDtos.getSampleSensorRequest();
         final Sensor mock = mock(Sensor.class);
 
