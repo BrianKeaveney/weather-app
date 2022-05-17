@@ -10,3 +10,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/weather-app
     username: postgres
     password: secret
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: it
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

@@ -24,7 +24,6 @@ public class SensorServiceImpl implements SensorService {
         return entity;
     }
 
-    @Override
     public Sensor getSensor(final String sensorId) {
 
         return sensorRepository.findBySensorId(sensorId);

@@ -26,6 +26,7 @@ public class Sensor {
 
     private String cityName;
 
+    @Column(nullable = false, unique = true)
     private String sensorId;
 
     @OneToMany(mappedBy = "sensor")
